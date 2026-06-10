@@ -1,5 +1,6 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body class="dashboard-body">
     <header class="dash-header">
         <div class="dash-header-left">
             <a href="index.html" class="btn-back">&larr; Página de Inicio</a>
-            <span class="status-indicator"><span class="dot-green"></span> Estás en: <strong>Consola En Línea</strong></span>
+            <span class="status-indicator"><span class="dot-green"></span> Estás en: <strong>Consola En
+                    Línea</strong></span>
         </div>
         <div class="dash-header-right">
             <span class="user-email">emiliano.corona@usb.edu.mx</span>
@@ -33,7 +36,8 @@
                 <a href="inventario.html"><span>&#128230;</span> Inventario Local</a>
                 <a href="shopify.html"><span>&#128279;</span> Conexión Shopify <span class="dot-green-small"></span></a>
                 <a href="simulador.html"><span>&#128722;</span> Simulador de Ventas</a>
-                <a href="pwa-offline.html" class="active"><span>&#9889;</span> App Móvil & Offline <span class="badge-pwa">PWA</span></a>
+                <a href="pwa-offline.html" class="active"><span>&#9889;</span> App Móvil & Offline <span
+                        class="badge-pwa">PWA</span></a>
             </nav>
             <div class="sidebar-actions">
                 <p>ACCIÓN RÁPIDA</p>
@@ -45,37 +49,53 @@
         <main class="dash-content">
             <div class="content-split">
                 <div class="card">
-                    <h4 style="color: var(--primary-blue); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;"><span style="color: var(--accent-green);">⚡</span> Aplicación Móvil (PWA)</h4>
-                    <p style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 2rem; line-height: 1.5;">Instale PyME-Sync directamente en la pantalla de su teléfono de forma nativa para poder utilizar y reajustar mercadería offline sin retrasos en zonas sin cobertura.</p>
-                    
-                    <div style="background: var(--primary-blue); padding: 30px; border-radius: 20px; text-align: center; margin-bottom: 2rem;">
-                        <div style="background: white; border-radius: 16px; padding: 20px; max-width: 200px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
-                            <div style="background: var(--accent-green); color: white; width: 40px; height: 40px; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-weight: bold; margin: 0 auto 10px auto;">PS</div>
+                    <h4
+                        style="color: var(--primary-blue); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--accent-green);">⚡</span> Aplicación Móvil (PWA)</h4>
+                    <p style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 2rem; line-height: 1.5;">
+                        Instale PyME-Sync directamente en la pantalla de su teléfono de forma nativa para poder utilizar
+                        y reajustar mercadería offline sin retrasos en zonas sin cobertura.</p>
+
+                    <div
+                        style="background: var(--primary-blue); padding: 30px; border-radius: 20px; text-align: center; margin-bottom: 2rem;">
+                        <div
+                            style="background: white; border-radius: 16px; padding: 20px; max-width: 200px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                            <div
+                                style="background: var(--accent-green); color: white; width: 40px; height: 40px; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-weight: bold; margin: 0 auto 10px auto;">
+                                PS</div>
                             <h5 style="color: var(--primary-blue); margin-bottom: 2px;">PyME-Sync Premium</h5>
-                            <p style="color: var(--accent-green); font-size: 0.6rem; font-weight: bold; margin-bottom: 15px;">Instalador Autónomo PWA</p>
-                            <button id="btn-instalar-pwa" class="btn-green" style="width: 100%; font-size: 0.8rem;">Instalar en Inicio 🔗</button>
+                            <p
+                                style="color: var(--accent-green); font-size: 0.6rem; font-weight: bold; margin-bottom: 15px;">
+                                Instalador Autónomo PWA</p>
+                            <button id="btn-instalar-pwa" class="btn-green"
+                                style="width: 100%; font-size: 0.8rem;">Instalar en Inicio 🔗</button>
                         </div>
                     </div>
 
                     <h5 style="color: var(--primary-blue); margin-bottom: 10px;">¿Cómo instalar manualmente?</h5>
                     <div style="margin-bottom: 15px;">
                         <strong style="font-size: 0.75rem; color: var(--text-gray);">IOS / APPLE SAFARI 🍎</strong>
-                        <p style="font-size: 0.8rem; color: var(--text-gray); margin-top: 5px;">Presione el botón de <strong>Compartir</strong> abajo en Safari, y seleccione la opción "Agregar a Inicio".</p>
+                        <p style="font-size: 0.8rem; color: var(--text-gray); margin-top: 5px;">Presione el botón de
+                            <strong>Compartir</strong> abajo en Safari, y seleccione la opción "Agregar a Inicio".</p>
                     </div>
                     <div>
                         <strong style="font-size: 0.75rem; color: var(--text-gray);">CHROME / ESCRITORIO 💻</strong>
-                        <p style="font-size: 0.8rem; color: var(--text-gray); margin-top: 5px;">Haga clic sobre el icono de <strong>Instalación (↓)</strong> arriba a la derecha de su barra URL para anclarla como aplicación autónoma.</p>
+                        <p style="font-size: 0.8rem; color: var(--text-gray); margin-top: 5px;">Haga clic sobre el icono
+                            de <strong>Instalación (↓)</strong> arriba a la derecha de su barra URL para anclarla como
+                            aplicación autónoma.</p>
                     </div>
                 </div>
 
                 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                     <div class="card-dark">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                             <h4 style="font-size: 0.9rem;">Consola de Red Virtual para Pruebas</h4>
                             <span style="color: #10B981;">●</span>
                         </div>
-                        <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 15px;">Desconecte momentáneamente la red simulada para ver cómo actúa el catálogo.</p>
-                        
+                        <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 15px;">Desconecte momentáneamente
+                            la red simulada para ver cómo actúa el catálogo.</p>
+
                         <div class="network-toggles">
                             <div class="toggle-btn toggle-online">
                                 <strong>🔵 EN LÍNEA (ONLINE)</strong>
@@ -93,21 +113,26 @@
                                 <li>Pinche el botón de "Sin Red (Offline)" arriba.</li>
                                 <li>Vaya a "Inventario Local" y reste o sume stock.</li>
                                 <li>Verifique aquí abajo cómo el sistema guarda la transacción temporalizada.</li>
-                                <li>Regrese a este panel y pulse "🔵 En línea" para presenciar la auto-reconciliación.</li>
+                                <li>Regrese a este panel y pulse "🔵 En línea" para presenciar la auto-reconciliación.
+                                </li>
                             </ol>
                         </div>
                     </div>
 
                     <div class="card">
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #E2E8F0; padding-bottom: 10px;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #E2E8F0; padding-bottom: 10px;">
                             <h5 style="color: var(--primary-blue);">Cola de Modificaciones Offline</h5>
-                            <span style="background: #F1F5F9; color: var(--text-gray); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold;">0 Registros</span>
+                            <span
+                                style="background: #F1F5F9; color: var(--text-gray); padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold;">0
+                                Registros</span>
                         </div>
-                        
+
                         <div class="empty-state">
                             <div class="icon">✅</div>
                             <h5>Sin transacciones pendientes</h5>
-                            <p>Toda su información local está coordinada y respaldada en la nube con Shopify de forma exitosa.</p>
+                            <p>Toda su información local está coordinada y respaldada en la nube con Shopify de forma
+                                exitosa.</p>
                         </div>
                     </div>
                 </div>
@@ -115,4 +140,5 @@
         </main>
     </div>
 </body>
+
 </html>
