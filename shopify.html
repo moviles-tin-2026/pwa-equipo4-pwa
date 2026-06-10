@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Sync | PyME-Sync</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <a href="index.html" class="btn-back">&larr; Página de Inicio</a>
+            <span class="status-indicator"><span class="dot-green"></span> Estás en: <strong>Consola En Línea</strong></span>
+        </div>
+        <div class="dash-header-right">
+            <span class="user-email">equipo4.dewey@usb.edu.mx</span>
+            <div class="user-avatar">EC</div>
+        </div>
+    </header>
+
+    <div class="dash-container">
+        <aside class="dash-sidebar">
+            <div class="sidebar-brand">
+                <span class="dot-green"></span>
+                <div>
+                    <h4>PYME-SYNC DASHBOAARD</h4>
+                    <p>PWA Sincronizado</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><span>&#8862;</span> Resumen General</a>
+                <a href="inventario.html"><span>&#128230;</span> Inventario Local</a>
+                <a href="shopify.html" class="active"><span>&#128279;</span> Conexión Shopify <span class="dot-green-small"></span></a>
+                <a href="simulador.html"><span>&#128722;</span> Simulador de Ventas</a>
+                <a href="pwa-offline.html"><span>&#9889;</span> App Móvil & Offline <span class="badge-pwa">PWA</span></a>
+            </nav>
+            <div class="sidebar-actions">
+                <p>ACCIÓN RÁPIDA</p>
+                <button class="btn-dark">+ Agregar Producto</button>
+                <button class="btn-green">&#128472; Sincronizar Catálogo</button>
+            </div>
+        </aside>
+
+        <main class="dash-content">
+            <div class="content-split">
+                <div class="card">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 5px;">Configuración de Conexión de API Shopify</h4>
+                    <p style="color: var(--text-gray); font-size: 0.8rem; margin-bottom: 1.5rem;">Vincule sus tokens y webhook a las bases locales para autoalimentar stock.</p>
+                    
+                    <div class="form-group">
+                        <label>Clave Secreta de API Admin (Password)</label>
+                        <input type="password" class="form-control" value="....................................">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 2;">
+                            <label>Tienda Shopify (.myshopify.com)</label>
+                            <input type="text" class="form-control" value="tienda-gourmet.myshopify.com">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label>Intervalo de Sincronización Web (Min.)</label>
+                            <input type="number" class="form-control" value="5">
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <div class="checkbox-text">
+                                <h5>Habilitar Sincronización Automática</h5>
+                                <p>Reduce stock en Shopify al concretar venta en el POS local.</p>
+                            </div>
+                            <input type="checkbox" checked style="width: 18px; height: 18px; accent-color: var(--primary-blue);">
+                        </div>
+                        <div style="height: 1px; background: #E2E8F0; width: 100%;"></div>
+                        <div class="checkbox-item">
+                            <div class="checkbox-text">
+                                <h5>Activar Canal Seguro Webhook</h5>
+                                <p>Verifica integridad de datos del inventario cada noche.</p>
+                            </div>
+                            <input type="checkbox" checked style="width: 18px; height: 18px; accent-color: var(--primary-blue);">
+                        </div>
+                    </div>
+
+                    <div style="text-align: right;">
+                        <button class="btn-green" style="padding: 10px 20px;">Guardar Credenciales</button>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="card">
+                        <h5 style="color: var(--text-gray); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.5px;">Estadísticas de Integración</h5>
+                        <div class="stat-row">
+                            <span class="stat-label">Estado API Shopify</span>
+                            <span class="status-badge status-ok">SALUDABLE (CONECTADO)</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Webhooks Activos</span>
+                            <span class="stat-value text-green">2 Activos</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Velocidad de Respuesta</span>
+                            <span class="stat-value">180ms (Promedio)</span>
+                        </div>
+                    </div>
+
+                    <div class="card-dark" style="background: var(--primary-blue);">
+                        <h4 style="color: var(--accent-green); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px;">Controles de Sincronización Manual</h4>
+                        <p style="font-size: 0.8rem; margin-bottom: 20px; line-height: 1.5;">Si los datos de stock local y los que figuran en línea no coinciden, apriete abajo para restablecer la paridad en lote.</p>
+                        <button class="btn-green" style="width: 100%;">🔄 Realizar Alineación de Catálogo Completa</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
