@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | PyME-Sync</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <!-- Barra Superior -->
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <a href="index.html" class="btn-back">&larr; Página de Inicio</a>
+            <span class="status-indicator"><span class="dot-green"></span> Estás en: <strong>Consola En Línea</strong></span>
+        </div>
+        <div class="dash-header-right">
+            <span class="user-email">equipo4.dewey@usb.edu.mx</span>
+            <div class="user-avatar">EC</div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <div class="dash-container">
+        <!-- Menú Lateral -->
+        <aside class="dash-sidebar">
+            <div class="sidebar-brand">
+                <span class="dot-green"></span>
+                <div>
+                    <h4>PYME-SYNC DASHBOARD</h4>
+                    <p>PWA Sincronizado</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="active"><span>&#8862;</span> Resumen General</a>
+                <a href="inventario.html"><span>&#128230;</span> Inventario Local</a>
+                <a href="shopify.html"><span>&#128279;</span> Conexión Shopify <span class="dot-green-small"></span></a>
+                <a href="simulador.html"><span>&#128722;</span> Simulador de Ventas</a>
+                <a href="pwa-offline.html"><span>&#9889;</span> App Móvil & Offline <span class="badge-pwa">PWA</span></a>
+            </nav>
+            <div class="sidebar-actions">
+                <p>ACCIÓN RÁPIDA</p>
+                <button class="btn-dark">+ Agregar Producto</button>
+                <button class="btn-green">&#128472; Sincronizar Catálogo</button>
+            </div>
+        </aside>
+
+        <!-- Contenido Central -->
+        <main class="dash-content">
+            <!-- Tarjetas de Métricas -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <p>VALOR TOTAL</p>
+                    <h3>$4,935.00 <span>USD</span></h3>
+                </div>
+                <div class="metric-card">
+                    <p>STOCK BAJO</p>
+                    <h3>1 <span>Por agotar</span></h3>
+                </div>
+                <div class="metric-card">
+                    <p>AGOTADOS</p>
+                    <h3 class="text-red">1 <span>Unidades</span></h3>
+                </div>
+                <div class="metric-card">
+                    <p>VÍNCULO SHOPIFY</p>
+                    <h3>80% <span>Catálogo</span></h3>
+                </div>
+            </div>
+
+            <!-- Sección Inferior (Logs y Gráficas) -->
+            <div class="content-split">
+                <!-- Historial de Logs -->
+                <div class="logs-section card">
+                    <div class="logs-header">
+                        <h4>Historial de Logs de Transmisión</h4>
+                        <p>Canal asíncrono en vivo - Conexión POS local y Web Shopify</p>
+                    </div>
+                    <div class="log-list">
+                        <div class="log-item">
+                            <div class="log-icon info">i</div>
+                            <div class="log-details">
+                                <p><strong>Sistema inicializado correctamente. Versión v2.1.0-prod.</strong></p>
+                                <span>Origen: <strong>SYSTEM</strong></span>
+                            </div>
+                            <div class="log-time">13:35:12</div>
+                        </div>
+                        <div class="log-item">
+                            <div class="log-icon sync">&#128472;</div>
+                            <div class="log-details">
+                                <p><strong>Conexión establecida exitosamente con el webhook de Shopify.</strong></p>
+                                <span>Origen: <strong class="text-green">SHOPIFY</strong></span>
+                            </div>
+                            <div class="log-time">13:36:00</div>
+                        </div>
+                        <div class="log-item">
+                            <div class="log-icon sync">&#128472;</div>
+                            <div class="log-details">
+                                <p><strong>Sincronización manual completada: 4 productos actualizados.</strong></p>
+                                <span>Origen: <strong class="text-green">PYME-SYNC</strong></span>
+                            </div>
+                            <div class="log-time">13:38:45</div>
+                        </div>
+                        <div class="log-item">
+                            <div class="log-icon cart">&#128722;</div>
+                            <div class="log-details">
+                                <p><strong>Venta registrada en Shopify: Orden #1084. Stock reducido de 6 a 5.</strong></p>
+                                <span>Origen: <strong class="text-green">SHOPIFY</strong></span>
+                            </div>
+                            <div class="log-time">13:40:10</div>
+                        </div>
+                    </div>
+                    <div class="logs-footer">
+                        <span>Soportado por Firebase Realtime Engine</span>
+                        <a href="#" class="text-green">Limpiar Historial</a>
+                    </div>
+                </div>
+
+                <!-- Existencias -->
+                <div class="stock-section card-dark">
+                    <h4>Existencias por Categorías</h4>
+                    <p>Distribución física de existencias en tiendas locales</p>
+                    
+                    <div class="progress-bars">
+                        <div class="bar-group">
+                            <div class="bar-labels"><span>Prendas de Vestir</span><span>75 unidades</span></div>
+                            <div class="progress-track"><div class="progress-fill fill-green" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar-labels"><span>Calzado de Cuero</span><span>5 unidades</span></div>
+                            <div class="progress-track"><div class="progress-fill fill-yellow" style="width: 15%;"></div></div>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar-labels"><span>Relojes & Accesorios</span><span>0 unidades</span></div>
+                            <div class="progress-track"><div class="progress-fill fill-red" style="width: 0%;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="alert-box">
+                        <p class="text-green"><strong>&#128640; ALERTA DE REPOSICIÓN:</strong></p>
+                        <p>Tienes <strong>2 productos</strong> con nivel de existencias críticamente deprimido. Revisa las piezas en la pestaña de Ajustes de Inventario.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
