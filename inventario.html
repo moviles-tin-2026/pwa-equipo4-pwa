@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario | PyME-Sync</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <header class="dash-header">
+        <div class="dash-header-left">
+            <a href="index.html" class="btn-back">&larr; Página de Inicio</a>
+            <span class="status-indicator"><span class="dot-green"></span> Estás en: <strong>Consola En Línea</strong></span>
+        </div>
+        <div class="dash-header-right">
+            <span class="user-email">equipo4.dewey@usb.edu.mx</span>
+            <div class="user-avatar">EC</div>
+        </div>
+    </header>
+
+    <div class="dash-container">
+        <aside class="dash-sidebar">
+            <div class="sidebar-brand">
+                <span class="dot-green"></span>
+                <div>
+                    <h4>PYME-SYNC DASHBOARD</h4>
+                    <p>PWA Sincronizado</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><span>&#8862;</span> Resumen General</a>
+                <a href="inventario.html" class="active"><span>&#128230;</span> Inventario Locaaal</a>
+                <a href="shopify.html"><span>&#128279;</span> Conexión Shopify <span class="dot-green-small"></span></a>
+                <a href="simulador.html"><span>&#128722;</span> Simulador de Ventas</a>
+                <a href="pwa-offline.html"><span>&#9889;</span> App Móvil & Offline <span class="badge-pwa">PWA</span></a>
+            </nav>
+            <div class="sidebar-actions">
+                <p>ACCIÓN RÁPIDA</p>
+                <button class="btn-dark">+ Agregar Producto</button>
+                <button class="btn-green">&#128472; Sincronizar Catálogo</button>
+            </div>
+        </aside>
+
+        <main class="dash-content">
+            <div class="card" style="padding: 0;">
+                <div style="padding: 1.5rem;">
+                    <div class="inventory-header">
+                        <div>
+                            <h4 style="color: var(--primary-blue); margin-bottom: 5px;">Ajuste y Sincronización Manual de Inventarios</h4>
+                            <p style="color: var(--text-gray); font-size: 0.85rem;">Modifica existencias locales en tiempo real y empuja los movimientos al servidor de Shopify.</p>
+                        </div>
+                        <div class="inventory-actions">
+                            <input type="text" class="form-control" placeholder="🔍 Buscar por nombre/SKU..." style="width: 250px;">
+                            <select class="form-control" style="width: auto; font-weight: bold;">
+                                <option>Todas</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="inv-table">
+                            <thead>
+                                <tr>
+                                    <th>Detalle del Producto</th>
+                                    <th>Precio Lista</th>
+                                    <th style="text-align: center;">Stock Físico Local</th>
+                                    <th>Stock en Shopify</th>
+                                    <th>Estado</th>
+                                    <th>Canal Sync</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="product-info">
+                                            <div class="product-img">👕</div>
+                                            <div class="product-details">
+                                                <p>Camisa Oxford Premium</p>
+                                                <span>SHIR-OXF-01</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="font-weight: 700; color: var(--primary-blue);">$-49.00</td>
+                                    <td>
+                                        <div class="stock-counter">
+                                            <button>-</button><span>45</span><button>+</button>
+                                        </div>
+                                    </td>
+                                    <td style="font-weight: 600; color: var(--primary-blue);">45 un.</td>
+                                    <td><span class="status-badge status-ok">OK</span></td>
+                                    <td><button class="btn-sync-icon">🔄</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-info">
+                                            <div class="product-img" style="background:#D4D4D8;">👞</div>
+                                            <div class="product-details">
+                                                <p>Zapato Derby de Cuero</p>
+                                                <span>SHOE-DER-02</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="font-weight: 700; color: var(--primary-blue);">$-120.00</td>
+                                    <td>
+                                        <div class="stock-counter">
+                                            <button>-</button><span>5</span><button>+</button>
+                                        </div>
+                                    </td>
+                                    <td style="font-weight: 600; color: var(--primary-blue);">5 un.</td>
+                                    <td><span class="status-badge status-bajo">BAJO</span></td>
+                                    <td><button class="btn-sync-icon">🔄</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-info">
+                                            <div class="product-img" style="background:#1E293B;">⌚</div>
+                                            <div class="product-details">
+                                                <p>Reloj Cronógrafo Matte</p>
+                                                <span>WAT-CHR-04</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="font-weight: 700; color: var(--primary-blue);">$-199.00</td>
+                                    <td>
+                                        <div class="stock-counter">
+                                            <button>-</button><span class="stock-zero">0</span><button>+</button>
+                                        </div>
+                                    </td>
+                                    <td style="font-size: 0.8rem; color: var(--text-gray);">Sin vincular</td>
+                                    <td><span class="status-badge status-agotado">AGOTADO</span></td>
+                                    <td><button class="btn-vincular">VINCULAR</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
